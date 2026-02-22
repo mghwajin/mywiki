@@ -4,8 +4,6 @@ README.md
 
 This user guide overviews maintenance tasks for **Endeavour OS** systems, relevant terminal commands, general user tools, and links to additional resources.
 
----
-
 ## Overview 
 
 [eos-logo]: wiki/images/endeavouros-logo-text-dark.svg
@@ -44,27 +42,27 @@ Through terminal commands, users can upgrade essential packages, obtain new prog
 
 ### System maintenance and setup
 
-| System Maintenance        | User Tools & Setup           |
-| ------------------------- | ---------------------------- |
-| [Overview][1]             | [Change login background][7] |
-| [System files backup][2]  | [Copy cursor selection][8]   |
-| [System files cleanup][3] | [Enable `cron`][9] |
-| [Update core packages][4] | [`git clone` usage][10] |
-| [Update mirrors][5]       | ---     |
-| [Resolve config conflicts][6] | --- |
+| System Maintenance         | User Tools & Setup           |
+| -------------------------- | ---------------------------- |
+| [Overview][1]              | [Change login background][7] |
+| [Create system backups][2] | [Copy cursor selection][8]   |
+| [Clean system files][3]    | [Enable `cron` scheduler][9] |
+| [Update system packages][4]| [`git clone` to a location][10] |
+| [Update mirrors][5]           | ---   |
+| [Resolve config conflicts][6] | ---   |
 
 <!-- wiki links -->
-[1]: https://github.com/mghwajin/mywiki/wiki/sys-maintenance-overview
-[2]: https://github.com/mghwajin/mywiki/wiki/sys-backup-timeshift
-[3]: https://github.com/mghwajin/mywiki/wiki/sys-file-cleanup
-[4]: https://github.com/mghwajin/mywiki/wiki/sys-update-packages
-[5]: https://github.com/mghwajin/mywiki/wiki/sys-update-mirrors
-[6]: https://github.com/mghwajin/mywiki/wiki/sys-config-conflicts
+[1]: https://github.com/mghwajin/mywiki/wiki/System-maintenance-overview
+[2]: https://github.com/mghwajin/mywiki/wiki/Create-system-backups
+[3]: https://github.com/mghwajin/mywiki/wiki/Clean-system-files
+[4]: https://github.com/mghwajin/mywiki/wiki/Update-system-packages
+[5]: https://github.com/mghwajin/mywiki/wiki/Update-mirrors
+[6]: https://github.com/mghwajin/mywiki/wiki/Resolve-config-conflicts
 
-[7]: https://github.com/mghwajin/mywiki/wiki/tools-login-bg
-[8]: https://github.com/mghwajin/mywiki/wiki/tools-cursor-select
-[9]: https://github.com/mghwajin/mywiki/wiki/tools-enable-cron
-[10]: https://github.com/mghwajin/mywiki/wiki/tools-git-clone
+[7]: https://github.com/mghwajin/mywiki/wiki/Change-login-background
+[8]: https://github.com/mghwajin/mywiki/wiki/Copy-cursor-screen-selection
+[9]: https://github.com/mghwajin/mywiki/wiki/Enable-cron-scheduler
+[10]: https://github.com/mghwajin/mywiki/wiki/git-clone-to-a-location
 
 ---
 
@@ -76,8 +74,8 @@ Through terminal commands, users can upgrade essential packages, obtain new prog
 | [Convert video to MP3][b] | Requires `ffmpeg` and `thunar` file manager. Runs a custom action in `thunar` to convert a selected video file into an `.mp3` file. This script sets `ffmpeg` to use VBR (variable bit rate) for the highest possible audio quality for conversion. |
 
 <!-- script links -->
-[a]: /scripts/xfce4-screenshooter-autosave.sh
-[b]: /scripts/thunar-convert-to-mp3.sh
+[a]: scripts/xfce4-screenshooter-autosave.sh
+[b]: scripts/thunar-convert-to-mp3.sh
 
 **General tips**
 - Scripts may require adjustments to function properly on your system's setup. For example, a script referencing `/home/some-username` should be edited to match your `/home/user` directory.
