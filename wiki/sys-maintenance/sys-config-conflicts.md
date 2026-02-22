@@ -1,0 +1,92 @@
+---
+System maintenance > Resolve config conflicts
+---
+
+# Resolve config conflicts
+
+During or after a system update with `pacman -Syu`, the system may notify you of conflicting configuration files.
+
+```sh
+warning: /etc/pacman.d/xyz installed as /etc/pacman.d/xyz.pacnew
+
+warning: /etc/pacman.d/abc installed as /etc/pacman.d/abc.pacsave
+```
+
+The `eos-pacdiff` script is used to resolve these conflicting files. It utilizes both the `pacdiff` utility and `meld` GUI tools.
+
+> [!WARNING]\
+> It is highly recommended to resolve these **ASAP**.
+> 
+> Misconfigured or conflicting files may prevent programs from functioning properly (or altogether), and can also worsen if left unaddressed!
+
+<!------------------------------------------------->
+
+## `eos-pacdiff`
+
+1. When notified by the system about conflicting config files, run:
+   
+    ```sh
+    eos-pacdiff
+    ```
+
+2. Select `V(iew)` to compare the config files side-by-side.
+
+3. Review the files for significant changes.
+
+4. `R(emove)`, `O(verwrite)`, or `M(erge)` the differing lines as necessary.
+
+> [!TIP]\
+> It is good practice to create backups of both the original and modified `.pacnew` and `.pacsave` files.
+
+<!-------------------------------------->
+
+## FAQs
+
+### How does `eos-pacdiff` work?
+
+`eos-pacdiff` creates backups for all modes, warns the user not to make rash changes, and calls the below tools to assist the user resolve conflicts:
+
+- `pacdiff` \- A utility tool that allows users to view and merge any changes between the original and `.pacnew/.pacsave` files.
+
+ - `meld` \- A GUI tool that helps users view the comparisons between config files
+
+To run the same process manually, use:
+
+ ```sh
+ DIFFPROG=meld pacdiff -s
+ ```
+
+> [!CAUTION]\
+> **Do not run this with root permissions!**  This is a powerful tool that can cause serious damage to system files if used incorrectly. 
+> 
+> Refrain from modifying key system files such as `/etc/passwd`, `/etc/group`, and `/etc/shadow`, otherwise you **may lock yourself out of your system.**
+
+Here is an example of how a file comparison looks like in **`meld`**:
+
+  [meld-ex]: https://linuxopsys.com/wp-content/uploads/2024/03/basic_usages_1.png
+  ![A side-by-side visual comparison of an example script file in the `meld` GUI from the LinuxOpSys website][meld-ex]
+  *Image credit: [LinuxOpSys - How to use Meld diff tool in Linux][meld-ex]*
+
+> [!NOTE]\
+> See: [`pacdiff manpage`][pacdiff], [`diff manpage`][diff], [`meld manpage`][meld]
+
+[pacdiff]: https://man.archlinux.org/man/pacdiff.8.en
+[diff]: https://www.man7.org/linux/man-pages/man1/diff.1.html
+[meld]: https://man.archlinux.org/man/meld.1
+
+---
+
+### What are `.pacnew` and `.pacsave` files?
+
+These are configuration files that are generated when `pacman` creates copies of config files and prevents overwrite by appending `.pacsave` or `.pacnew` to the filename.
+
+  - A `.pacnew` file is created during an upgrade to avoid overwriting the existing configuration file.
+
+  - A `.pacsave` file is created during package removal (or an upgrade that first requires removal) and the system indicates that it should also be backed up.
+
+> [!NOTE]\
+> See: [Pacnew and Pacsave wiki][pacnew-pacsave]
+
+[pacnew-pacsave]: https://wiki.archlinux.org/title/Pacman/Pacnew_and_Pacsave
+
+<!-- EOF -->

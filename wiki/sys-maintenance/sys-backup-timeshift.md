@@ -1,0 +1,86 @@
+---
+System maintenance > Create system backups
+---
+
+# Create system backups
+
+System backups are created with `timeshift`, an important utility tool that creates "snapshots" of key system settings and files. 
+
+These snapshots can be used to restore the system to a prior state if the current state becomes unbootable or unusable.
+
+## How to create a snapshot
+
+Create a snapshot **on demand** (unscheduled) by using:
+ 
+ ```sh
+ sudo timeshift --create
+ ```
+
+To first check if a snapshot is due, then create one if needed, use:
+
+ ```sh
+ sudo timeshift --check
+ ```
+
+> [!IMPORTANT]\
+> It is highly recommended to create daily backups and before making changes to important system settings (such as config files).
+>
+> See: [`Timeshift` wiki][timeshift], [Restore system with snapshot][restore-snapshot]
+
+[timeshift]: https://wiki.archlinux.org/title/Timeshift
+[restore-snapshot]: https://itsfoss.gitlab.io/post/how-to-use-timeshift-to-backup-and-restore-linux-system/#restoring-your-linux-system-with-timeshift
+
+
+## `timeshift` options
+
+### Snapshot type
+
+**RSYNC** snapshots are incremental copies of changed system files.
+ -  Keeps hard-links for files unchanged from the previous snapshot.
+
+ -  Take up more space but are much more simple to set up.
+
+**BTRFS** snapshots are only available on systems that are set up with a BTRFS file system.
+ - Much quicker and space-efficient.
+
+ - Requires more technical knowledge of files systems to properly configure.
+
+### Back up location
+
+It is recommended to set snapshots to save onto an external drive, or an internal drive separate from the system's boot partition. 
+ - This eases the process of recovering to a previous state if the current one becomes unbootable.
+
+ - BTRFS snapshots can only be saved onto the same device that the system's root partition is located on.
+
+ > [!NOTE]\
+> While you can select the specific drive/device to save snapshots to,`timeshift`'s default directory path on the device **cannot be changed**.
+
+### Saved data
+
+To save disk space, `timeshift` does not save any user files by default. 
+
+Setting `timeshift` to save **non-system files** will use a very large amount of disk space, especially with automatic snapshots enabled.
+
+### Snapshot limits
+
+Once the number of snapshots reaches the set limit, `timeshift` deletes the oldest snapshot of that category. The exact amounts vary between users. Here is an example of snapshot limits:
+ - 4 monthly
+ - 4 weekly
+ - 7 daily
+ - 5 hourly
+ - 5 boot
+
+### Scheduled snapshots
+
+Users can set up `cron` to schedule time-based jobs. 
+
+When configured, the system automatically generates scheduled snapshots up to the set limit, and deletes old snapshots.
+
+> [!TIP]\
+> You can set up an automated process to take snapshots at scheduled intervals by enabling the `cron` scheduler. This must be manually enabled.
+>
+> See: [Enable the `cron` scheduler][cron]
+
+[cron]: ../user-tools-and-setup/enable-the-cron-scheduler.md
+
+<!-- EOF -->
