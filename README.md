@@ -9,7 +9,7 @@ This user guide overviews maintenance tasks for **Endeavour OS** systems, releva
 [eos-logo]: wiki/images/endeavouros-logo-text-dark.svg
 ![Endeavour OS logo and text for a dark background][eos-logo]
 
-[Endeavour OS][eos] is a resource-light and terminal-centric Linux distribution based on [Arch Linux][arch]. It provides a beginner-friendly setup option (via the Calamares tool) along with the classic Arch installation process for power users.
+**[Endeavour OS][eos]** is a resource-light and terminal-centric Linux distribution based on [Arch Linux][arch]. It provides a beginner-friendly setup option (via the Calamares tool) along with the classic Arch installation process for power users.
 
 Linux systems are highly customizeable but require more hands-on maintenance to run smoothly. Users should regularly:
 
@@ -66,7 +66,7 @@ Through terminal commands, users can upgrade essential packages, obtain new prog
 
 ---
 
-## Custom scripts
+## Custom shell scripts
 
 | Script  | Description           |
 | ------- | --------------------- |
@@ -78,11 +78,11 @@ Through terminal commands, users can upgrade essential packages, obtain new prog
 [b]: scripts/thunar-convert-to-mp3.sh
 
 **General tips**
-- Scripts may require adjustments to function properly on your system's setup. For example, a script referencing `/home/some-username` should be edited to match your `/home/user` directory.
+- Shell scripts may require adjustments to function properly on your system's setup. For example, a script referencing `/home/some-username` should be edited to match your `/home/user` directory.
 
-- Create a `/home/user/bin` directory to place your custom scripts for easy file access, consistency, and organization.
+- It is recommended to create a `/home/user/bin` directory to place scripts in for easy file access, consistency, and organization.
 
-- Be sure to set the script as an executable file with the `chmod` command: `chmod +x script.sh` 
+- Be sure to set the script.sh file as an executable with the `chmod` command: `chmod +x script.sh` 
 
 ---
 
@@ -95,7 +95,7 @@ Official **Endeavour OS** resources and links to additional information:
 | [Ganymede][ganymede] | The new Ganymede ISO was released on November 29, 2025. |
 | [EOS README][eos-rm] | Where you can find important news and EOS updates.      |
 | [Knowledge base][kb] | Library of various tutorials, troubleshooting guides, and intros to Linux tools. |
-| [EOS forums][forums] |  A place to read up on EOS system updates, ask for troubleshooting help, and connect with the user community. |
+| [EOS forums][forums] | A place to read up on EOS system updates, ask for troubleshooting help, and connect with the user community. |
 | [Arch wiki][arch-wiki] | Wiki with detailed articles and common troubleshooting cases for Arch-related programs and processes. |
 | [Distrowatch][distro]  | Comprehensive Linux resource center that includes a weekly newsletter and Linux terms glossary. |
 
@@ -117,7 +117,7 @@ Official **Endeavour OS** resources and links to additional information:
 
 ```
 Revision history
-    2026/02 - Major restructuring, archive old repo
+    2026/02 - Major wiki restructuring, add shell scripts, archive old repo
     2026/01 - Typo and formatting fixes
     2025/12 - Added glossary, command cheatsheet, and Ganymede ISO info
     2025/11 - Rework of docs content and structure
