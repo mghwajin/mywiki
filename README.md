@@ -40,9 +40,8 @@ Through terminal commands, users can upgrade essential packages, obtain new prog
 - [Wiki homepage][wiki]
 
 <!-- quicklinks -->
-[gh-pages]: https://mghwajin.github.io/eos-basics/index.html
-[readme]: https://github.com/mghwajin/eos-basics/blob/main/README.md
-[wiki]: https://github.com/mghwajin/eos-basics/wiki
+[readme]: https://github.com/mghwajin/mywiki/blob/main/README.md
+[wiki]: https://github.com/mghwajin/mywiki/wiki
 [eos]: https://endeavouros.com/
 
 ### System maintenance and setup
@@ -50,24 +49,24 @@ Through terminal commands, users can upgrade essential packages, obtain new prog
 | System Maintenance        | User Tools & Setup           |
 | ------------------------- | ---------------------------- |
 | [Overview][1]             | [Change login background][7] |
-| [Back up system files][2] | [Copy cursor selection][8]   |
-| [Clean unused files][3]   | [Enable `cron` scheduler][9] |
-| [Update system packages][4] | [Use `git clone`][10]      |
-| [Update mirrors][5]         | ---                        |
-| [Resolve conflicting configs][6] | ---                   |
+| [System files backup][2]  | [Copy cursor selection][8]   |
+| [System files cleanup][3] | [Enable `cron`][9] |
+| [Update core packages][4] | [`git clone` usage][10] |
+| [Update mirrors][5]       | ---     |
+| [Resolve config conflicts][6] | --- |
 
 <!-- wiki links -->
-[1]: https://github.com/mghwajin/eos-basics/wiki/system-maintenance-overview
-[2]: https://github.com/mghwajin/eos-basics/wiki/create-system-backups-with-timeshift
-[3]: https://github.com/mghwajin/eos-basics/wiki/clean-unused-system-files
-[4]: https://github.com/mghwajin/eos-basics/wiki/system-updates-with-pacman-and-yay
-[5]: https://github.com/mghwajin/eos-basics/wiki/mirror-maintenance-guide
-[6]: https://github.com/mghwajin/eos-basics/wiki/resolve-conflicting-config-files
+[1]: https://github.com/mghwajin/mywiki/wiki/sys-maintenance-overview
+[2]: https://github.com/mghwajin/mywiki/wiki/sys-backup-timeshift
+[3]: https://github.com/mghwajin/mywiki/wiki/sys-file-cleanup
+[4]: https://github.com/mghwajin/mywiki/wiki/sys-update-packages
+[5]: https://github.com/mghwajin/mywiki/wiki/sys-update-mirrors
+[6]: https://github.com/mghwajin/mywiki/wiki/sys-config-conflicts
 
-[7]: https://github.com/mghwajin/eos-basics/wiki/change-login-background
-[8]: https://github.com/mghwajin/eos-basics/wiki/copy-cursor-selection-to-clipboard
-[9]: https://github.com/mghwajin/eos-basics/wiki/enable-the-cron-scheduler
-[10]: https://github.com/mghwajin/eos-basics/wiki/git-clone-to-location
+[7]: https://github.com/mghwajin/mywiki/wiki/tools-login-bg
+[8]: https://github.com/mghwajin/mywiki/wiki/tools-cursor-select
+[9]: https://github.com/mghwajin/mywiki/wiki/tools-enable-cron
+[10]: https://github.com/mghwajin/mywiki/wiki/tools-git-clone
 
 ---
 
@@ -122,7 +121,7 @@ Official **Endeavour OS** resources and links to additional information:
 
 ```
 Revision history
-    2026/02 - Major restructuring, consolidate w/ custom scripts
+    2026/02 - Major restructuring, archive old repo
     2026/01 - Typo and formatting fixes
     2025/12 - Added glossary, command cheatsheet, and Ganymede ISO info
     2025/11 - Rework of docs content and structure
