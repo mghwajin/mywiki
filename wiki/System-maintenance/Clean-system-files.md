@@ -1,8 +1,7 @@
----
-System maintenance > System files cleanup
----
 
-# Clean unused system files
+# System maintenance > Clean system files
+
+## Overview
 
 `pacman` and `yay` store different versions of packages and their dependencies in cache folders. Unused files, dependencies, and logs accumulate over time and should periodically be cleared to keep the system's disk space tidy.
 
@@ -117,7 +116,7 @@ This combined command will list orphans (unused package dependencies). After use
 
 After running `sudo pacman -Qdtq | sudo pacman -Rns -`, enter `Y` to confirm removal of the listed orphans.
 
-  [remove-orphans]: ../../images/remove-orphans.png
+  [remove-orphans]: ./images/remove-orphans.png
   ![Terminal output listing an orphan after running `sudo pacman -Qdtq | sudo pacman -Rns -`][remove-orphans]
 
 ---

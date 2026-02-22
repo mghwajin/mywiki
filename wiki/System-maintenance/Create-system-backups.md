@@ -1,8 +1,7 @@
----
-System maintenance > Create system backups
----
 
-# Create system backups
+# System maintenance > Create system backups
+
+## Overview
 
 System backups are created with `timeshift`, an important utility tool that creates "snapshots" of key system settings and files. 
 

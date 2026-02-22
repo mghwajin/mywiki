@@ -1,12 +1,10 @@
----
-System maintenance > Overview
----
 
-# Overview
+# System maintenance > Overview
 
 Arch-based distros like Endeavour OS have rolling release updates. These frequent updates keep up with latest feature releases, but can also cause some unforeseen issues. Users should regularly run maintenance tasks to keep the system clean, up to date, and secure.
 
-**Quick resources**
+## Quick resources
+
 - [Key terms glossary](#key-terms-glossary)
 - [Maintenance cheatsheet](#maintenance-cheatsheet)
 
@@ -16,6 +14,8 @@ Arch-based distros like Endeavour OS have rolling release updates. These frequen
 - [System updates with `pacman` and `yay`](sys-update-packages)
 - [Mirror maintenance guide](sys-update-mirrors)
 - [Resolve conflicting config files](sys-config-conflicts)
+
+---
 
 > [!TIP]\
 > Another key resource for Linux commands and other utility tools are [`manpages`][manpage], or "manual pages". These are available offline, in-terminal, and provide in-depth usage information for terminal commands and available options. It is recommended to reference a `manpage` when confused about a command or tool!
@@ -89,7 +89,7 @@ Open the **Welcome App** from System Applications, or with the `eos-welcome` ter
 
 ![Endeavour OS Welcome program v25.10.3-1 with a list of update scripts on the Assistant tab.][eos-welcome]
 
-[eos-welcome]: ../../images/eos-welcome.png
+[eos-welcome]: ./images/eos-welcome.png
 [welcome-app]: https://discovery.endeavouros.com/endeavouros-tools/welcome/2021/03/
 
 ---

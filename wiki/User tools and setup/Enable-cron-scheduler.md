@@ -1,8 +1,7 @@
----
-User tools & setup > Enable `cron` scheduler
----
 
-# Enable `cron` scheduler
+# User tools & setup > Enable `cron` scheduler
+
+## `cron`/`cronie` overview
 
 `cron` is a scheduling `daemon` that allows the system to automatically run programs and other jobs on a set schedule. In Arch systems, `cronie`, an implementation of `cron`, is used.
 

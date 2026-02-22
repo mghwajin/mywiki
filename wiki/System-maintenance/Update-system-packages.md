@@ -1,8 +1,6 @@
----
-System maintenance > Update system packages
----
+# System maintenance > Update system packages
 
-# Update system packages
+## Overview
 
 There are 3 basic commands that Endeavour OS users should regularly run to keep their system packages (programs, apps, libraries, etc.) up to date.
 
@@ -178,7 +176,7 @@ Some update errors are caused by issues with mirrors and mirrorlist configuratio
 > [!NOTE]\
 > Outdated package databases will cause errors when `pacman` tries to retrieve the latest package files. This can be fixed through regular mirror maintenance.
 > 
-> See: [[Mirror maintenance guide|mirror-maintenance-guide]]
+> See: [Update mirrors guide](Update-mirrors)
 
 ---
 

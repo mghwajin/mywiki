@@ -1,8 +1,5 @@
----
-System maintenance > Update mirrors
----
 
-# Mirror maintenance guide
+# System maintenance > Update mirrors
 
 This guide overviews the definitions of mirrors, mirrorlists, possible errors, and how to maintain up-to-date mirrors.
 
@@ -42,7 +39,7 @@ Arch packages are updated on a frequent and unscheduled rolling-release basis. Y
 
 2. By default, `reflector-simple` selects the **20 fastest** mirrors based on your set location. You can adjust these preferences in the GUI tool.
  
-    [reflector-simple-1]: ../../images/reflector-simple-1.png
+    [reflector-simple-1]: ./images/reflector-simple-1.png
     ![A GUI Preference menu that displays after running `reflector-simple`, displaying settings such as region, filter by options, and amount.][reflector-simple-1]
 
    - The `reflector-simple` GUI tool allows easy customization of mirror locations, the number of mirrors stored, and ranking priority (latest, fastest, etc.)
@@ -51,7 +48,7 @@ Arch packages are updated on a frequent and unscheduled rolling-release basis. Y
 
 4. The system will notify you once the new Arch `mirrorlist` has been generated. **Save** to apply the configuration changes.
    
-   [reflector-simple-2]: ../../images/reflector-simple-2.png
+   [reflector-simple-2]: ./images/reflector-simple-2.png
    ![New mirrorlist output from `reflector-simple` listing 20 U.S. mirrors ranked by speed.][reflector-simple-2]
 
 5. **Refresh the system** to sync the newly obtained mirrors with the Arch package databases:
@@ -86,7 +83,7 @@ Arch packages are updated on a frequent and unscheduled rolling-release basis. Y
 
 5. To confirm and save the changes, enter your system's root password.
    
-   [rank-mirrors-3]: ../../images/eos-rankmirrors-3.png 
+   [rank-mirrors-3]: ./images/eos-rankmirrors-3.png 
    ![Bottom of `eos-rankmirrors` terminal output waiting for root password confirmation to save the mirrorlist.][rank-mirrors-3]
 
 6. If you do **NOT** wish to make the  `mirrorlist` changes, stop the terminal process. By default, this shortcut is bound to `Ctrl+C` in the terminal.

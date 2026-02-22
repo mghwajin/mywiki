@@ -1,8 +1,7 @@
----
-User tools & setup > Copy cursor selection to clipboard
----
 
-# Copy cursor selection to clipboard
+# User tools & setup > Copy cursor selection to clipboard 
+
+## `xfce4-screenshooter` overview
 
 You can set up a keyboard shortcut that copies a selected area to the clipboard without saving a file. This is the equivalent of the `Win+Shift+S` shortcut in Windows OS.
 
@@ -43,9 +42,9 @@ xfce-screenshooter -rc
 
 ---
 
-[shortcut-1]: ../../images/xfce-shortcut-1.png
-[shortcut-2]: ../../images/xfce-shortcut-2.png
-[shortcut-3]: ../../images/xfce-shortcut-3.png
+[shortcut-1]: ./images/xfce-shortcut-1.png
+[shortcut-2]: ./images/xfce-shortcut-2.png
+[shortcut-3]: ./images/xfce-shortcut-3.png
 
 > [!NOTE]\
 > See: [`xfce4-screenshooter manpage`][xfce4-manpage],  [`xfce4-screenshooter` usage][xfce4-usage]

@@ -1,13 +1,12 @@
----
-User tools & setup > Change login Background
----
 
-# Change login background
+# User tools & setup > Change login Background
+
+## Overview
 
 Background images set in the **Login Window GUI editor** will only display if the system's `display manager` (DM) and/or `greeter` can access the specified image file.
 - i.e. Setting the background image to a file in a general "Pictures" folder may not work.
 
-[login-window-gui]: ../../images/login-window-gui.png
+[login-window-gui]: ./images/login-window-gui.png
 ![Login Window GUI editor on the Appearance options tab, which contains options for General, Background, Themes, and Optional pictures selections.][login-window-gui]
 
 If the image cannot be accessed, the login screen displays only the background color that was set.

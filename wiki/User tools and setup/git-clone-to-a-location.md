@@ -1,14 +1,15 @@
----
-User tools & setup > `git clone` to a location
----
 
-# `git clone` to a location
+# User tools & setup > `git clone` to a location
+
+## `git clone` usage
 
 By default, `git` repositories are cloned into the current directory (usually `~/home`). You can specify the intended location for a repository using:
 
 ```shell
 git clone <repository-url> <destination-folder>
 ```
+
+## Considerations
 
 - If this directory already exists, it must be **empty**, otherwise you will get an error.
 

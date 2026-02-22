@@ -1,8 +1,7 @@
----
-System maintenance > Resolve config conflicts
----
 
-# Resolve config conflicts
+# System maintenance > Resolve config conflicts
+
+## Configuration file conflicts
 
 During or after a system update with `pacman -Syu`, the system may notify you of conflicting configuration files.
 
@@ -21,7 +20,7 @@ The `eos-pacdiff` script is used to resolve these conflicting files. It utilizes
 
 <!------------------------------------------------->
 
-## `eos-pacdiff`
+## Using `eos-pacdiff`
 
 1. When notified by the system about conflicting config files, run:
    
