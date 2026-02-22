@@ -1,6 +1,4 @@
----
 README.md
----
 
 # Endeavour OS Basics
 
@@ -10,7 +8,7 @@ This user guide overviews maintenance tasks for **Endeavour OS** systems, releva
 
 ## Overview 
 
-[eos-logo]: /images/endeavouros-logo-text-dark.svg
+[eos-logo]: wiki/images/endeavouros-logo-text-dark.svg
 ![Endeavour OS logo and text for a dark background][eos-logo]
 
 [Endeavour OS][eos] is a resource-light and terminal-centric Linux distribution based on [Arch Linux][arch]. It provides a beginner-friendly setup option (via the Calamares tool) along with the classic Arch installation process for power users.
