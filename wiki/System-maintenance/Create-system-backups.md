@@ -80,6 +80,6 @@ When configured, the system automatically generates scheduled snapshots up to th
 >
 > See: [Enable the `cron` scheduler][cron]
 
-[cron]: ../user-tools-and-setup/enable-the-cron-scheduler.md
+[cron]: Enable-cron-scheduler
 
 <!-- EOF -->
