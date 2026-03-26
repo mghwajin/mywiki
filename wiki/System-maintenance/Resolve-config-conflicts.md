@@ -3,7 +3,9 @@
 
 ## Configuration file conflicts
 
-During or after a system update with `pacman -Syu`, the system may notify you of conflicting configuration files.
+During or after a system update with `pacman -Syu`, the system may notify you of conflicting configuration files. 
+
+**It is highly recommended to resolve these conflicts ASAP**. Misconfigured or conflicting configs can prevent programs from running properly, and may worsen if left unaddressed.
 
 ```sh
 warning: /etc/pacman.d/xyz installed as /etc/pacman.d/xyz.pacnew
@@ -13,10 +15,6 @@ warning: /etc/pacman.d/abc installed as /etc/pacman.d/abc.pacsave
 
 The `eos-pacdiff` script is used to resolve these conflicting files. It utilizes both the `pacdiff` utility and `meld` GUI tools.
 
-> [!WARNING]\
-> It is highly recommended to resolve these **ASAP**.
-> 
-> Misconfigured or conflicting files may prevent programs from functioning properly (or altogether), and can also worsen if left unaddressed!
 
 <!------------------------------------------------->
 
