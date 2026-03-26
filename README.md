@@ -22,7 +22,7 @@ Linux systems are highly customizeable but require more hands-on maintenance to 
 Through terminal commands, users can upgrade essential packages, obtain new program features, and ensure system stability and security.
 
 > [!NOTE]\
-> This repository is a personal reference for my setup and experience with Endeavour OS. In addition to basic wiki guides and a maintenance cheatsheet, this repo contains custom scripts that can be used as general tools and program shortcuts.
+> This repository is a reference for my personal setup and experience with Endeavour OS. In addition to basic wiki guides and a maintenance cheatsheet, this repo includes custom scripts that can be used as general tools and program shortcuts.
 
 <!-- links -->
 [arch]: https://archlinux.org/
@@ -58,31 +58,10 @@ Through terminal commands, users can upgrade essential packages, obtain new prog
 [4]: https://github.com/mghwajin/mywiki/wiki/Update-system-packages
 [5]: https://github.com/mghwajin/mywiki/wiki/Update-mirrors
 [6]: https://github.com/mghwajin/mywiki/wiki/Resolve-config-conflicts
-
 [7]: https://github.com/mghwajin/mywiki/wiki/Change-login-background
 [8]: https://github.com/mghwajin/mywiki/wiki/Copy-cursor-screen-selection
 [9]: https://github.com/mghwajin/mywiki/wiki/Enable-cron-scheduler
 [10]: https://github.com/mghwajin/mywiki/wiki/git-clone-to-a-location
-
----
-
-## Custom shell scripts
-
-| Script  | Description           |
-| ------- | --------------------- |
-| [Autosave screenshot][a] | Requires `xfce4-screenshooter`. Instantly and automatically save a fullscreen screenshot with the date appended to the filename. Running this script bypasses the window waiting for filename input from the user. |
-| [Convert video to MP3][b] | Requires `ffmpeg` and `thunar` file manager. Runs a custom action in `thunar` to convert a selected video file into an `.mp3` file. This script sets `ffmpeg` to use VBR (variable bit rate) for the highest possible audio quality for conversion. |
-
-<!-- script links -->
-[a]: scripts/xfce4-screenshooter-autosave.sh
-[b]: scripts/thunar-convert-to-mp3.sh
-
-**General tips**
-- Shell scripts may require adjustments to function properly on your system's setup. For example, a script referencing `/home/some-username` should be edited to match your `/home/user` directory.
-
-- It is recommended to create a `/home/user/bin` directory to place scripts in for easy file access, consistency, and organization.
-
-- Be sure to set the script.sh file as an executable with the `chmod` command: `chmod +x script.sh` 
 
 ---
 
@@ -95,6 +74,7 @@ Official **Endeavour OS** resources and links to additional information:
 | [Ganymede][ganymede] | The new Ganymede ISO was released on November 29, 2025. |
 | [EOS README][eos-rm] | Where you can find important news and EOS updates.      |
 | [Knowledge base][kb] | Library of various tutorials, troubleshooting guides, and intros to Linux tools. |
+| [EOS forums][forums] | A place to read up on EOS system updates, ask for troubleshooting help, and connect with the user community. |
 | [EOS forums][forums] | A place to read up on EOS system updates, ask for troubleshooting help, and connect with the user community. |
 | [Arch wiki][arch-wiki] | Wiki with detailed articles and common troubleshooting cases for Arch-related programs and processes. |
 | [Distrowatch][distro]  | Comprehensive Linux resource center that includes a weekly newsletter and Linux terms glossary. |
@@ -115,8 +95,29 @@ Official **Endeavour OS** resources and links to additional information:
 
 ---
 
+## Custom shell scripts
+
+| Script  | Description           |
+| ------- | --------------------- |
+| [Autosave screenshot][a] | Requires `xfce4-screenshooter`. Instantly and automatically save a fullscreen screenshot with the date appended to the filename. Running this script bypasses the window waiting for filename input from the user. |
+| [Convert video to MP3][b] | Requires `ffmpeg` and `thunar` file manager. Runs a custom action in `thunar` to convert a selected video file into an `.mp3` file. This script sets `ffmpeg` to use VBR (variable bit rate) for the highest possible audio quality for conversion. |
+
+<!-- script links -->
+[a]: scripts/xfce4-screenshooter-autosave.sh
+[b]: scripts/thunar-convert-to-mp3.sh
+
+**General tips**
+- Shell scripts may require adjustments to function properly on your system's setup. For example, a script referencing `/home/some-username` should be edited to match your `/home/user` directory.
+
+- It is recommended to create a `/home/user/bin` directory to place scripts in for easy file access, consistency, and organization.
+
+- Be sure to set the `script.sh` file as an executable with the `chmod` command: `chmod +x script.sh` 
+
+---
+
 ```
 Revision history
+    2026/03 - Update system maintenance wiki pages
     2026/02 - Major wiki restructuring, add shell scripts, archive old repo
     2026/01 - Typo and formatting fixes
     2025/12 - Added glossary, command cheatsheet, and Ganymede ISO info
