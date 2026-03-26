@@ -65,11 +65,10 @@ Other basic `pacman` commands include:
 [pacman-wiki]: https://wiki.archlinux.org/title/Pacman
 [yay]: https://aur.archlinux.org/packages/yay
 
-
 <!------------------------------------------------------>
 
 ## `yay`
-`yay`, which stands for "yet another yogurt", is one of the most popular **AUR helpers** used in the Arch Linux community. `yay`<sup>[AUR][yay]</sup> functions like the `pacman` package manager, simplifying the process of downloading, installing, updating, and removing AUR-specific software.
+`yay`<sup>[AUR][yay]</sup>  (or "yet another yogurt") is one of the most popular **AUR helpers** in the Arch Linux community. Like `pacman`, `yay` works as a package manager, simplifying the process of downloading, installing, updating, and removing AUR-specific packages.
 - *FAQ: [What is the Arch User Repository (AUR)?](#what-is-the-aur)*
 
 To update the system's native and AUR packages, run:
@@ -77,7 +76,7 @@ To update the system's native and AUR packages, run:
 yay
 ```
 > [!IMPORTANT]\
-> It is recommended to run `yay` every 1-2 weeks.
+> It is recommended to run `yay` every 1-2 weeks. \
 
 The terminal will list the packages available to upgrade and may ask for the user to select:
   1. Which package provider should be used (where to download files from)
@@ -105,11 +104,12 @@ The terminal will list the packages available to upgrade and may ask for the use
  Enter a number (default=1): 
  ==> 
  ```
-
 > [!CAUTION]\
->  Do not run `yay` with root permissions (`sudo`), or it may cause accidental (and potentially fatal) system changes. The AUR helper does not require root permissions to manage packages.
+>  Do not run `yay` with root permissions (`sudo`), or it may cause accidental (and potentially fatal) system changes. AUR helpers do not require root permissions to manage packages.
 
 </details>
+
+`yay` may upgrade packages to a verson newer than the one from Endeavour OS updates, as the EOS team confirms package stability before including packages in system updates. You can specify which AUR packages to update, or forgo the update with `Ctrl+Shift+C` in the terminal.
 
 > [!NOTE]\ 
 > AUR packages are community-maintained and **unofficial**. It is highly recommended to check build files for any malicious code before installation.
