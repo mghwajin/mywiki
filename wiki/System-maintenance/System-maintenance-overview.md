@@ -1,7 +1,9 @@
 
 # System maintenance > Overview
 
-Arch-based distros like Endeavour OS have rolling release updates. These frequent updates keep up with latest feature releases, but can also cause some unforeseen issues. Users should regularly run maintenance tasks to keep the system clean, up to date, and secure.
+Arch-based distros like Endeavour OS have rolling release updates. These small and frequent updates keep up with latest feature releases. 
+
+Users should regularly run maintenance tasks to keep the system clean, up to date, and secure. This also ensures quick patches for issues or bugs from previous updates.
 
 ## Quick resources
 
@@ -18,7 +20,7 @@ Arch-based distros like Endeavour OS have rolling release updates. These frequen
 ---
 
 > [!TIP]\
-> Another key resource for Linux commands and other utility tools are [`manpages`][manpage], or "manual pages". These are available offline, in-terminal, and provide in-depth usage information for terminal commands and available options. It is recommended to reference a `manpage` when confused about a command or tool!
+> Another key resource for Linux commands and other utility tools are **manual pages**. These "manpages" are available offline, in-terminal, and provide in-depth usage information for terminal commands and available options. It is highly recommended to reference a [`manpage`][manpage] when confused about a command or tool!
 
 [manpage]: https://wiki.archlinux.org/title/Man_page
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-There are 3 basic commands that Endeavour OS users should regularly run to keep their system packages (programs, apps, libraries, etc.) up to date.
+There are 3 commands frequently used for Endeavour OS system updates: `pacman -Syu`, `yay`, and `eos-update`. It is generally recommanded to run updates on a daily to weekly basis as Arch-based systems receive small, very frequent updates or patches to new features.
 
 - [`sudo pacman -Syu`](#sudo-pacman--syu)
 - [`yay`](#yay)
@@ -15,9 +15,6 @@ There are 3 basic commands that Endeavour OS users should regularly run to keep 
  ```sh
  sudo pacman -Syu
  ```
-
-> [!IMPORTANT]\
-> It is recommended to update your system **daily** to ensure that system packages are up to date. This is important when a previous update had issues that were fixed or reverted.
 
 <details open> 
  <summary><code>sudo pacman -Syu</code> terminal output example:
@@ -72,7 +69,7 @@ Other basic `pacman` commands include:
 <!------------------------------------------------------>
 
 ## `yay`
-`yay`<sup>[AUR][yay]</sup> stands for "yet another yogurt" and it is one of the most popular **AUR helpers** used in the Arch Linux community. It functions like the `pacman` package manager, simplifying the process of downloading, installing, updating, and removing AUR-specific software.
+`yay`, which stands for "yet another yogurt", is one of the most popular **AUR helpers** used in the Arch Linux community. `yay`<sup>[AUR][yay]</sup> functions like the `pacman` package manager, simplifying the process of downloading, installing, updating, and removing AUR-specific software.
 - *FAQ: [What is the Arch User Repository (AUR)?](#what-is-the-aur)*
 
 To update the system's native and AUR packages, run:
@@ -80,7 +77,7 @@ To update the system's native and AUR packages, run:
 yay
 ```
 > [!IMPORTANT]\
-> It is recommended to run `yay` at least every 1-2 weeks.
+> It is recommended to run `yay` every 1-2 weeks.
 
 The terminal will list the packages available to upgrade and may ask for the user to select:
   1. Which package provider should be used (where to download files from)
