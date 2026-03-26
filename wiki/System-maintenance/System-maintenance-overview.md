@@ -1,9 +1,11 @@
 
 # System maintenance > Overview
 
-Arch-based distros like Endeavour OS have rolling release updates. These small and frequent updates keep up with latest feature releases. 
+Arch-based distros like Endeavour OS have rolling release updates. Users should regularly run maintenance tasks to keep the system clean, up to date, and secure. This also ensures quick patches for issues or bugs from previous updates.
 
-Users should regularly run maintenance tasks to keep the system clean, up to date, and secure. This also ensures quick patches for issues or bugs from previous updates.
+> [!INFO]\
+> Small and frequent "rolling release" updates negate the need for major OS upgrades, which are typical for stable Linux distributions such as Debian, Mint, and Slackware. It is important to note that leaving an Arch system outdated for too long may require a full OS update.
+
 
 ## Quick resources
 
@@ -11,11 +13,11 @@ Users should regularly run maintenance tasks to keep the system clean, up to dat
 - [Maintenance cheatsheet](#maintenance-cheatsheet)
 
 **Guides**
-- [Clean unused system files](sys-file-cleanup)
-- [Create system backups with `timeshift`](sys-backup-timeshift)
-- [System updates with `pacman` and `yay`](sys-update-packages)
-- [Mirror maintenance guide](sys-update-mirrors)
-- [Resolve conflicting config files](sys-config-conflicts)
+- [Clean system files](Clean-system-files)
+- [Create system backups with `timeshift`](Create-system-backups)
+- [System updates with `pacman` and `yay`](Update-system-packages)
+- [Update mirrors](Update-mirrors)
+- [Resolve conflicting config files](Resolve-config-conflicts)
 
 ---
 
