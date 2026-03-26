@@ -2,7 +2,7 @@
 
 ## Overview
 
-There are 3 commands frequently used for Endeavour OS system updates: `pacman -Syu`, `yay`, and `eos-update`. It is generally recommanded to run updates on a daily to weekly basis as Arch-based systems receive small, very frequent updates or patches to new features.
+There are 3 commands frequently used for Endeavour OS system updates: `pacman -Syu`, `yay`, and `eos-update`. It is generally recommanded to run updates on a daily to weekly basis for Arch-based distros.
 
 - [`sudo pacman -Syu`](#sudo-pacman--syu)
 - [`yay`](#yay)
@@ -16,9 +16,10 @@ There are 3 commands frequently used for Endeavour OS system updates: `pacman -S
  sudo pacman -Syu
  ```
 
+\
+**Example terminal output: `sudo pacman -Syu`**
 <details open> 
- <summary><code>sudo pacman -Syu</code> terminal output example:
- </summary>
+ <summary></summary>
 
  ```sh
  [user@computer ~] $ sudo pacman -Syu
@@ -56,8 +57,6 @@ Other basic `pacman` commands include:
 | `pacman -Ss <pkg>` | Searches for a specified package on the system. |
 | `pacman -Qi <pkg>` | Retrieve a list of the dependencies a package needs to run. |
 
----
-
 > [!NOTE]\
 > See: [`pacman manpage`][pacman], [`pacman` wiki][pacman-wiki]
 
@@ -84,9 +83,12 @@ The terminal will list the packages available to upgrade and may ask for the use
   3. If the Make dependencies should also be removed
   4. Etc.
 
+> [!CAUTION]\
+>  Do not run `yay` with root permissions (`sudo`), or it may cause accidental (and potentially fatal) system changes. AUR helpers do not require root permissions to manage packages.
+
+**Example terminal output: `yay`**
 <details open> 
- <summary>Example terminal output of <code>yay</code> waiting for user selection:
- </summary>
+ <summary></summary>
  
  ```sh
  [user@computer ~]$ yay
@@ -104,10 +106,8 @@ The terminal will list the packages available to upgrade and may ask for the use
  Enter a number (default=1): 
  ==> 
  ```
-> [!CAUTION]\
->  Do not run `yay` with root permissions (`sudo`), or it may cause accidental (and potentially fatal) system changes. AUR helpers do not require root permissions to manage packages.
-
 </details>
+<br/>
 
 `yay` may upgrade packages to a verson newer than the one from Endeavour OS updates, as the EOS team confirms package stability before including packages in system updates. You can specify which AUR packages to update, or forgo the update with `Ctrl+Shift+C` in the terminal.
 
@@ -119,8 +119,9 @@ The terminal will list the packages available to upgrade and may ask for the use
 [aur]: https://aur.archlinux.org/
 [aur-helpers]: https://wiki.archlinux.org/title/AUR_helpers
 
-
 <!----------------------------------------->
+
+---
 
 ## `eos-update`
 
@@ -130,9 +131,13 @@ Endeavour OS provides an optional update script that utilizes `pacman` and `yay`
 eos-update
 ```
 
+Depending on user preference, `eos-update` can be used in place of `yay` or `sudo pacman -Syu`. In practice, `eos-update --aur` and `eos-update` perform the same tasks as `yay` and `pacman -Syu`, but provide an added layer of options. Some options may require more advanced setup.
+
+Notably, running `eos-update` may be more helpful for users just needing a quick fix to the system, and/or for users who do not update the system frequently.
+
+**Example terminal output: `eos-update --help`**
 <details> 
- <summary><span>Here is a summary provided by running <code>eos-update --help</code> in the terminal:
- </summary>
+ <summary></summary>
 
  ```sh
  eos-update is a package updater for EndeavourOS and Arch.
@@ -154,14 +159,7 @@ eos-update
  - Ad hoc check for Nvidia GPU driver vs. kernel updates (non-dkms only).
  ```
 </details>
-
-> [!TIP]\
-> `eos-update` can be used in place of `yay` or `sudo pacman -Syu`.
-
-User preference for update commands varies greatly. `eos-update` performs the same tasks as `yay` and `pacman -Syu` with an added layer of options.
  
-Notably, running `eos-update` may be more helpful for users needing a quick fix to the system, and/or users who do not update the system frequently.
-
 ---
 
 ## FAQs
