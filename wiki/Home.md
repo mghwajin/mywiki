@@ -6,7 +6,7 @@
 
 This wiki contains short guides and overviews of Linux terminal commands used for basic system maintenance. Some of the commands covered in this wiki are exclusive to Arch Linux-based systems, and may differ from those used in Ubuntu, Fedora, and other distros.
 
-> [!NOTE]\ 
+> [!NOTE]\
 > **[Endeavour OS][eos]** is a resource-light and terminal-centric distro based on [Arch Linux][arch]. Along with the classic Arch installation experience for power users, it also provides an easy installation and setup process via the Calamares tool.
 
 Linux systems are highly customizeable but require more hands-on maintenance to run smoothly. Users should regularly:
