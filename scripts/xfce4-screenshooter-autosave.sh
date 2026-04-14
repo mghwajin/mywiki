@@ -1,12 +1,9 @@
 #!/bin/sh
-#
-# MAKE SURE TO ALLOW THIS SCRIPT TO RUN AS AN EXECUTABLE
-#
-# ----- custom xfce4-screenshooter script -----
+
 # autosave a fullscreen screenshot w/ current date appended to the filename.
 # uses -f (fullscreen) and -s (save) options, and a $(date) variable,
 # bypassing the save window that asks for filename input.
-#
+
 # this is a workaround if assigning the following script to keyboard shortcut didn't work:
 # >> xfce4-screenshooter -f -s "$HOME/Desktop/Screenshot_$(date +%Y-%m-%d_%H-%M-%S).png"
 # >> from official documentation: https://docs.xfce.org/apps/xfce4-screenshooter/usage
@@ -36,5 +33,3 @@ xfce4-screenshooter -f -s "$HOME/Screenshots/ss-${current_date}.png"
 # ----- example output -----
 # a screenshot taken on on oct 25, 2025 at 11:15:30 pm will save as:
 # ss-20251025-231530.png
-
-# ----- end -----
