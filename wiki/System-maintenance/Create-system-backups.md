@@ -9,17 +9,17 @@ These snapshots can be used to restore the system to a prior state if the curren
 
 ## How to create a snapshot
 
-Create a snapshot **on demand** (unscheduled) by using:
- 
- ```sh
- sudo timeshift --create
- ```
+1. Create an on-demand, unscheduled snapshot:
 
-To first check if a snapshot is due, then create one if needed, use:
+     ```sh
+     sudo timeshift --create
+     ```
 
- ```sh
- sudo timeshift --check
- ```
+2. To first check if a snapshot is due, then create one if needed, use:
+
+     ```sh
+     sudo timeshift --check
+     ```
 
 > [!IMPORTANT]\
 > It is highly recommended to create daily backups and before making changes to important system settings (such as config files).
@@ -31,6 +31,8 @@ To first check if a snapshot is due, then create one if needed, use:
 
 
 ## `timeshift` options
+
+`timeshift` options can be adjusted in the application, or through the terminal by running `sudo timeshift`. 
 
 ### Snapshot type
 

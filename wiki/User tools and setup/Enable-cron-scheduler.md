@@ -3,7 +3,9 @@
 
 ## `cron`/`cronie` overview
 
-`cron` is a scheduling `daemon` that allows the system to automatically run programs and other jobs on a set schedule. In Arch systems, `cronie`, an implementation of `cron`, is used.
+`cron` is a scheduling `daemon` that allows the system to automatically run programs and other jobs on a set schedule. 
+
+`cronie` is an implementation of `cron` used in Arch systems.
 
 Notably, `cronie` is essential for setting up automatic system backups through `timeshift`. This ensures the system automatically creates snapshots on system boot, every hour, etc. at user-defined frequencies.
 
@@ -16,21 +18,23 @@ Notably, `cronie` is essential for setting up automatic system backups through `
 
 <!------------------------------------------->
 
-## How to install `cronie`
+## Install `cronie`
 
-To install `cronie`, enter:
+1. To install `cronie`, enter:
 
-```sh
-sudo pacman -S cronie
-```
+   ```sh
+   sudo pacman -S cronie
+   ```
 
-`cronie` is disabled by default and must be manually enabled with:
+2. `cronie` must be manually enabled, as it comes disabled by default:
 
-```sh
-sudo systemctl enable cronie.service
-```
+   ```sh
+   sudo systemctl enable cronie.service
+   ```
 
-Once scheduled snapshots are configured in `timeshift`, the `cronie` scheduler will run regular jobs to automatically create snapshots.
+3. Open the `timeshift` application to set up when the system should automatically create a snapshot.
+
+Once scheduled snapshots are configured in `timeshift`, `cronie` will run regular jobs to automatically generate snapshots.
 
 <!------------------------------------------->
 
