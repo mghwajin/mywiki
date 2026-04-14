@@ -2,14 +2,14 @@ README.md
 
 # Endeavour OS Basics
 
-This user guide overviews maintenance tasks for **Endeavour OS** systems, relevant terminal commands, general user tools, and links to additional resources.
+This user guide overviews maintenance tasks for systems running **Endeavour OS**, relevant terminal commands, general user tools, and links to additional resources.
 
 ## Overview 
 
 [eos-logo]: wiki/images/endeavouros-logo-text-dark.svg
 ![Endeavour OS logo and text for a dark background][eos-logo]
 
-**[Endeavour OS][eos]** is a resource-light and terminal-centric Linux distribution based on [Arch Linux][arch]. It provides a beginner-friendly setup option (via the Calamares tool) along with the classic Arch installation process for power users.
+**[Endeavour OS][eos]** is a resource-light and terminal-centric distro based on [Arch Linux][arch]. Along with the classic Arch installation experience for power users, it also provides an easy installation and setup process via the Calamares tool.
 
 Linux systems are highly customizeable but require more hands-on maintenance to run smoothly. Users should regularly:
 
@@ -28,26 +28,23 @@ Through terminal commands, users can upgrade essential packages, obtain new prog
 [arch]: https://archlinux.org/
 [eos]: https://endeavouros.com/
 
----
-
 ## Quicklinks
 
 - [README][readme]
 - [Wiki homepage][wiki]
+- [Custom scripts overview][shell-scripts]
 
 <!-- quicklinks -->
 [readme]: https://github.com/mghwajin/mywiki/blob/main/README.md
 [wiki]: https://github.com/mghwajin/mywiki/wiki
-[eos]: https://endeavouros.com/
+[shell-scripts]: scripts/Shell-scripts-overview.md
 
-### System maintenance and setup
-
-| System Maintenance         | User Tools & Setup           |
-| -------------------------- | ---------------------------- |
-| [Overview][1]              | [Change login background][7] |
-| [Create system backups][2] | [Copy cursor selection][8]   |
-| [Clean system files][3]    | [Enable `cron` scheduler][9] |
-| [Update system packages][4]| [`git clone` to a location][10] |
+| System Maintenance Guides   | User Tools & Setup Guides    |
+| --------------------------- | ---------------------------- |
+| [Overview][1]               | [Change login background][7] |
+| [Create system backups][2]  | [Copy cursor selection][8]   |
+| [Clean system files][3]     | [Enable `cron` scheduler][9] |
+| [Update system packages][4] | [`git clone` to a location][10] |
 | [Update mirrors][5]           | ---   |
 | [Resolve config conflicts][6] | ---   |
 
@@ -63,23 +60,21 @@ Through terminal commands, users can upgrade essential packages, obtain new prog
 [9]: https://github.com/mghwajin/mywiki/wiki/Enable-cron-scheduler
 [10]: https://github.com/mghwajin/mywiki/wiki/git-clone-to-a-location
 
----
-
 ## Official resources
-Official **Endeavour OS** resources and links to additional information:
+Official **Endeavour OS** resources and links to additional useful information:
 
 | Link            | Description            | 
 | --------------- | ---------------------- | 
 | [Official site][eos] | The official Endeavour OS site where you can download and verify ISO images for installation. |
-| [Ganymede][ganymede] | The new Ganymede ISO was released on November 29, 2025. |
+| [Titan ISO][titan]   | The Titan ISO was released on March 12, 2026. | 
+| [Ganymede ISO][ganymede] | The Ganymede ISO was released on November 29, 2025. |
 | [EOS README][eos-rm] | Where you can find important news and EOS updates.      |
+| [EOS forums][forums] | A place to read up on EOS system updates, ask for troubleshooting help, and connect with the user community. |
 | [Knowledge base][kb] | Library of various tutorials, troubleshooting guides, and intros to Linux tools. |
-| [EOS forums][forums] | A place to read up on EOS system updates, ask for troubleshooting help, and connect with the user community. |
-| [EOS forums][forums] | A place to read up on EOS system updates, ask for troubleshooting help, and connect with the user community. |
 | [Arch wiki][arch-wiki] | Wiki with detailed articles and common troubleshooting cases for Arch-related programs and processes. |
 | [Distrowatch][distro]  | Comprehensive Linux resource center that includes a weekly newsletter and Linux terms glossary. |
 
-**Credits**
+Credits
 - [Endeavour OS Branding][brand]
 - [Endeavour OS Development][dev]
 
@@ -92,31 +87,13 @@ Official **Endeavour OS** resources and links to additional information:
 [kb]: https://discovery.endeavouros.com/
 [eos-rm]: https://gitlab.com/endeavouros-filemirror/Important-news/blob/main/README.md
 [ganymede]: https://endeavouros.com/news/the-long-wait-is-over-ganymede-has-arrived/
-
----
-
-## Custom shell scripts
-
-| Script  | Description           |
-| ------- | --------------------- |
-| [Autosave screenshot][a] | Requires `xfce4-screenshooter`. Instantly and automatically save a fullscreen screenshot with the date appended to the filename. Running this script bypasses the window waiting for filename input from the user. |
-| [Convert video to MP3][b] | Requires `ffmpeg` and `thunar` file manager. Runs a custom action in `thunar` to convert a selected video file into an `.mp3` file. This script sets `ffmpeg` to use VBR (variable bit rate) for the highest possible audio quality for conversion. |
-
-<!-- script links -->
-[a]: scripts/xfce4-screenshooter-autosave.sh
-[b]: scripts/thunar-convert-to-mp3.sh
-
-**General tips**
-- Shell scripts may require adjustments to function properly on your system's setup. For example, a script referencing `/home/some-username` should be edited to match your `/home/user` directory.
-
-- It is recommended to create a `/home/user/bin` directory to place scripts in for easy file access, consistency, and organization.
-
-- Be sure to set the `script.sh` file as an executable with the `chmod` command: `chmod +x script.sh` 
+[titan]: https://endeavouros.com/news/whats-new-in-endeavouros-titan-release/
 
 ---
 
 ```
 Revision history
+    2026/04 - Add Titan ISO release, edit wiki, separate shell scripts 
     2026/03 - Update system maintenance wiki pages
     2026/02 - Major wiki restructuring, add shell scripts, archive old repo
     2026/01 - Typo and formatting fixes
