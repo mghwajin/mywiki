@@ -36,34 +36,25 @@ Through various terminal commands, users can upgrade essential packages, obtain 
 
 - [Overview](System-maintenance-overview)
 
-- [Create system backups](Create-system-backups)
-  - `timeshift`, `cron`
+- [Create system backups](Create-system-backups) (`timeshift`)
 
-- [Clean system files](Clean-system-files)
-  - `paccache`, `journalctl`
+- [Clean system files](Clean-system-files) (`paccache`, `journalctl`)
 
-- [Update mirrors](Update-mirrors) 
-  - `eos-rankmirrors`, `reflector-simple`
+- [Update mirrors](Update-mirrors) (`eos-rankmirrors`, `reflector-simple`)
 
-- [Update system packages](Update-system-packages)
-  - `pacman`, `yay`, `eos-update`
+- [Update system packages](Update-system-packages) (`pacman`, `yay`, `eos-update`)
 
-- [Resolve config conflicts](Resolve-config-conflicts) 
-  - `eos-pacdiff`, `pacdiff`, `meld`
+- [Resolve config conflicts](Resolve-config-conflicts) (`eos-pacdiff`, `pacdiff`, `meld`)
 
 ### User tools & setup
 
-- [Change login background](tools-login-bg)
-  - `slick-greeter`, `nano`
+- [Change login background](tools-login-bg) (`nano`, `slick-greeter`)
 
-- [Copy cursor screen selection](Copy-cursor-screen-selection)
-  - `xfce4-screenshooter`
+- [Copy cursor screen selection](Copy-cursor-screen-selection) (`xfce4-screenshooter`)
 
-- [Enable `cron` scheduler](Enable-cron-scheduler)
-  - `timeshift`, `cron`, `systemctl` 
+- [Enable `cron` scheduler](Enable-cron-scheduler) (`timeshift`, `cron`, `systemctl`)
 
-- [`git clone` to a location](git-clone-to-a-location)
-  - `git`, `git clone`, `cd`
+- [`git clone` to a location](git-clone-to-a-location) (`git`, `git clone`, `cd`)
 
 ---
 
