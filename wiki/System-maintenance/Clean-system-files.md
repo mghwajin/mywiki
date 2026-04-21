@@ -51,7 +51,7 @@ By default, `pacman` stores package files in the `/var/cache/pacman/pkg` cache. 
 2. `yay` will confirm which files of the cache it should remove. Enter `Y` or `N` at the terminal prompts to keep or remove the packages.
     - By default (no input), it keeps all locally installed packages. 
 
-<details open>
+<details open="false"> 
  <summary>Example <code>yay -Sc</code> output below:
  </summary>
  
@@ -115,13 +115,15 @@ It is recommended to keep a minimum of **4 weeks** of logs, but the amount can b
    - If the terminal outputs `error: argument '-' specified with empty stdin`, this means there are no orphans to remove.
 
   [remove-orphans]: ./images/remove-orphans.png
-  ![Terminal output listing an orphan after running `sudo pacman -Qdtq | sudo pacman -Rns -`][remove-orphans]
+     ![Terminal output listing an orphan after running `sudo pacman -Qdtq | sudo pacman -Rns -`][remove-orphans]
 
 3. If there are orphan dependencies that you wish to **keep**, specify beforehand which ones should be excluded from removal with this command:
 
     ```sh
     sudo pacman -D --asexplicit <pkg>
     ```
+
+---
 
 Here is a brief breakdown of the individual commands used:
 | Command      | Description         | 

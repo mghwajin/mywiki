@@ -34,6 +34,8 @@ These snapshots can be used to restore the system to a prior state if the curren
 
 `timeshift` options can be adjusted in the application, or through the terminal by running `sudo timeshift`. 
 
+---
+
 ### Snapshot type
 
 **RSYNC** snapshots are incremental copies of changed system files.
@@ -46,6 +48,8 @@ These snapshots can be used to restore the system to a prior state if the curren
 
  - Requires more technical knowledge of files systems to properly configure.
 
+---
+
 ### Back up location
 
 It is recommended to set snapshots to save onto an external drive, or an internal drive separate from the system's boot partition. 
@@ -56,11 +60,15 @@ It is recommended to set snapshots to save onto an external drive, or an interna
  > [!NOTE]\
 > While you can select the specific drive/device to save snapshots to,`timeshift`'s default directory path on the device **cannot be changed**.
 
+---
+
 ### Saved data
 
 To save disk space, `timeshift` does not save any user files by default. 
 
 Setting `timeshift` to save **non-system files** will use a very large amount of disk space, especially with automatic snapshots enabled.
+
+---
 
 ### Snapshot limits
 
@@ -70,6 +78,8 @@ Once the number of snapshots reaches the set limit, `timeshift` deletes the olde
  - 7 daily
  - 5 hourly
  - 5 boot
+
+---
 
 ### Scheduled snapshots
 

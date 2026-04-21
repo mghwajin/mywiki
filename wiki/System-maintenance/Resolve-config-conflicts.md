@@ -8,6 +8,7 @@ During or after a system update with `pacman -Syu`, the system may notify you of
 **It is highly recommended to resolve these conflicts ASAP**. Misconfigured or conflicting configs can prevent programs from running properly, and may worsen if left unaddressed.
 
 ```sh
+# example warning messages
 warning: /etc/pacman.d/xyz installed as /etc/pacman.d/xyz.pacnew
 
 warning: /etc/pacman.d/abc installed as /etc/pacman.d/abc.pacsave
@@ -57,6 +58,8 @@ To run the same process manually, use:
 > **Do not run this with root permissions!**  This is a powerful tool that can cause serious damage to system files if used incorrectly. 
 > 
 > Refrain from modifying key system files such as `/etc/passwd`, `/etc/group`, and `/etc/shadow`, otherwise you **may lock yourself out of your system.**
+
+---
 
 Here is an example of how a file comparison looks like in **`meld`**:
 

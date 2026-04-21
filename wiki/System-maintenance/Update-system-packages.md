@@ -18,7 +18,7 @@ There are 3 commands frequently used for Endeavour OS system updates: `pacman -S
 
 \
 **Example terminal output: `sudo pacman -Syu`**
-<details open> 
+<details open="false"> 
  <summary></summary>
 
  ```sh
@@ -84,10 +84,10 @@ The terminal will list the packages available to upgrade and may ask for the use
   4. Etc.
 
 > [!CAUTION]\
->  Do not run `yay` with root permissions (`sudo`), or it may cause accidental (and potentially fatal) system changes. AUR helpers do not require root permissions to manage packages.
+> Do not run `yay` with root permissions (`sudo`), or it may cause accidental (and potentially fatal) system changes. AUR helpers do not require root permissions to manage packages.
 
 **Example terminal output: `yay`**
-<details open> 
+<details open="false"> 
  <summary></summary>
  
  ```sh
@@ -111,8 +111,9 @@ The terminal will list the packages available to upgrade and may ask for the use
 
 `yay` may upgrade packages to a verson newer than the one from Endeavour OS updates, as the EOS team confirms package stability before including packages in system updates. You can specify which AUR packages to update, or forgo the update with `Ctrl+Shift+C` in the terminal.
 
-> [!NOTE]\ 
+> [!NOTE]\
 > AUR packages are community-maintained and **unofficial**. It is highly recommended to check build files for any malicious code before installation.
+>
 > See: `yay`<sup>[AUR][aur]</sup>, [`yay` commands list][yay-commands], [Arch User Repository (AUR)][aur], [AUR helpers][aur-helpers]
 
 [yay-commands]: https://linuxcommandlibrary.com/man/yay
@@ -136,7 +137,7 @@ Depending on user preference, `eos-update` can be used in place of `yay` or `sud
 Notably, running `eos-update` may be more helpful for users just needing a quick fix to the system, and/or for users who do not update the system frequently.
 
 **Example terminal output: `eos-update --help`**
-<details> 
+<details open="false"> 
  <summary></summary>
 
  ```sh
@@ -168,7 +169,7 @@ Notably, running `eos-update` may be more helpful for users just needing a quick
 
 Some update errors are caused by issues with mirrors and mirrorlist configurations. These issues can be fixed by re-ranking mirrors.
 
-> [!NOTE]\
+> [!IMPORTANT]\
 > Outdated package databases will cause errors when `pacman` tries to retrieve the latest package files. This can be fixed through regular mirror maintenance.
 > 
 > See: [Update mirrors guide](Update-mirrors)

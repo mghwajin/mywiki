@@ -3,7 +3,7 @@
 
 Arch-based distros like Endeavour OS have rolling release updates. Users should regularly run maintenance tasks to keep the system clean, up to date, and secure. This also ensures quick patches for issues or bugs from previous updates.
 
-> [!INFO]\
+> [!NOTE]\
 > Small and frequent "rolling release" updates negate the need for major OS upgrades, which are typical for stable Linux distributions such as Debian, Mint, and Slackware. It is important to note that leaving an Arch system outdated for too long may require a full OS update.
 
 
