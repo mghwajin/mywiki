@@ -76,7 +76,7 @@ Arch packages are updated on a frequent and unscheduled rolling-release basis. Y
 
 3. The terminal may display errors/warnings as the system tests various mirrors for connectivity and speed. It may take a few minutes to find the requisite amount of mirrors.
    
-   [rank-mirrors-1]: ../images/eos-rankmirrors-1.png
+   [rank-mirrors-1]: ./images/eos-rankmirrors-1.png
    ![`eos-rankmirrors` terminal output listing timed-out mirrors and the new mirrorlist.][rank-mirrors-1]
 
 4. By default, the `eos-rankmirrors` script generates a new `mirrorlist` containing the 20 fastest EOS mirrors. These are listed along with the original `mirrorlist`.
