@@ -1,6 +1,13 @@
 
 # User tools & setup > Change default kernel
 
+## Contents
+
+1. [Find kernel id with `bootctl`](#1-find-kernel-id-with-bootctl)
+2. [Edit boot loader config](#2-edit-boot-loader-config)
+3. [Verify and reboot](#3-verify-and-reboot)
+4. [Additional information](#additional-information)
+
 ## Overview
 
 It is possible to have multiple kernels (or "versions") of the same Linux distro installed on a computer. The newest kernel is usually booted by default, but this can be adjusted to user preference.
@@ -8,7 +15,7 @@ It is possible to have multiple kernels (or "versions") of the same Linux distro
 To change the default kernel at system boot, you need to identify and adjust the kernel `ids` used in the `boot loader config` file.
 
 > [!NOTE]\
-> This guide assumes your system is using the default `systemd` boot manager for Endeavour OS, rather than `grub` or `refind`.
+> This guide assumes your system uses the default `systemd-boot` UEFI boot manager in Endeavour OS.
 
 ---
 
@@ -18,14 +25,14 @@ To change the default kernel at system boot, you need to identify and adjust the
 
 2. Check which kernel is currently set as default with:
 
-     ```sh
-     $ bootctl list
-     ```
+      ```sh
+      $ bootctl list
+      ```
 
 3. The terminal will display various details for installed kernels, indicating the kernel `(selected)` at boot and set as `(default)`.
 
-     ```sh
-     # kernel currently booted and set as default 
+      ```sh
+      # kernel currently booted and set as default 
          type: Boot Loader Specification Type 1 (.conf)      
         title: EndeavourOS (6.19.11-arch1-1)  (default) (selected) # current
            id: 1fcde8d015be4360aa122975ea19eca2-6.19.11-arch1-1.conf
@@ -36,10 +43,10 @@ To change the default kernel at system boot, you need to identify and adjust the
         linux: ...
        initrd: ...
       options: ...
-     ```
+      ```
 
-     ```sh
-     # kernel to set as default at boot
+      ```sh
+      # kernel to set as default at boot
          type: Boot Loader Specification Type 1 (.conf) 
         title: EndeavourOS (6.19.12-arch1-1)
            id: af2ba735c1714a3ebdd24c10355d5b20-6.19.12-arch1-1.conf
@@ -47,7 +54,7 @@ To change the default kernel at system boot, you need to identify and adjust the
      sort-key: endeavouros-6.19.12-arch1-1
       version: 6.19.12-arch1-1
    machine-id: af2ba735c1714a3ebdd24c10355d5b20 # id to set as default
-     ```
+      ```
 
 4. Copy the `machine-id` of the kernel you want to set as the default. In this example:
    - **Current id**: `1fcde8d015be4360aa122975ea19eca2`
