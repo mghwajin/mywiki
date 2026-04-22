@@ -48,6 +48,8 @@ Through various terminal commands, users can upgrade essential packages, obtain 
 
 ### User tools & setup
 
+- [Change default kernel](Change-default-kernel) (`bootctl`)
+
 - [Change login background](tools-login-bg) (`nano`, `slick-greeter`)
 
 - [Copy cursor screen selection](Copy-cursor-screen-selection) (`xfce4-screenshooter`)

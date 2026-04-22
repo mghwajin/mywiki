@@ -45,7 +45,7 @@ Through terminal commands, users can upgrade essential packages, obtain new prog
 | [Create system backups][2]  | [Copy cursor selection][8]   |
 | [Clean system files][3]     | [Enable `cron` scheduler][9] |
 | [Update system packages][4] | [`git clone` to a location][10] |
-| [Update mirrors][5]           | ---   |
+| [Update mirrors][5]         | [Change default kernel][11]  |
 | [Resolve config conflicts][6] | ---   |
 
 <!-- wiki links -->
@@ -59,6 +59,7 @@ Through terminal commands, users can upgrade essential packages, obtain new prog
 [8]: https://github.com/mghwajin/mywiki/wiki/Copy-cursor-screen-selection
 [9]: https://github.com/mghwajin/mywiki/wiki/Enable-cron-scheduler
 [10]: https://github.com/mghwajin/mywiki/wiki/git-clone-to-a-location
+[11]: https://github.com/mghwajin/mywiki/wiki/Change-default-kernel
 
 ## Official resources
 Official **Endeavour OS** resources and links to additional useful information:
