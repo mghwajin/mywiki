@@ -15,14 +15,15 @@ Arch-based distros like Endeavour OS have rolling release updates. Users should 
 **Guides**
 - [Clean system files](Clean-system-files)
 - [Create system backups with `timeshift`](Create-system-backups)
-- [System updates with `pacman` and `yay`](Update-system-packages)
+- [Downgrade with `eos-shifttime`](Downgrade-to-specific-date)
+- [System updates with `pacman`/`yay`](Update-system-packages)
 - [Update mirrors](Update-mirrors)
 - [Resolve conflicting config files](Resolve-config-conflicts)
 
 ---
 
 > [!TIP]\
-> Another key resource for Linux commands and other utility tools are **manual pages**. These "manpages" are available offline, in-terminal, and provide in-depth usage information for terminal commands and available options. It is highly recommended to reference a [`manpage`][manpage] when confused about a command or tool!
+> Another key resource for Linux commands and other utility tools are [`manpages`][manpage] (or "manual pages"), which provide in-depth usage information and are available offline.
 
 [manpage]: https://wiki.archlinux.org/title/Man_page
 
@@ -89,7 +90,7 @@ Below is a quick reference table of common terminal commands and the recommended
 > [!TIP]\
 > For users unfamiliar with terminal usage or needing quick system fixes, the [**Endeavour OS Welcome Assistant**][welcome-app] is a helpful alternative to manually running maintenance tasks.
 
-Open the **Welcome App** from System Applications, or with the `eos-welcome` terminal command.
+Open the **Welcome App** from System Applications, or with the `eos-welcome` terminal command. It can also be set to run automatically on startup.
 
 ![Endeavour OS Welcome program v25.10.3-1 with a list of update scripts on the Assistant tab.][eos-welcome]
 

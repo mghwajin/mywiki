@@ -6,7 +6,7 @@
 By default, `git` repositories are cloned into the current directory (usually `~/home`). You can specify the intended location for a repository using:
 
 ```shell
-git clone <repository-url> <destination-folder>
+ $ git clone <repository-url> <destination-folder>
 ```
 
 ## Considerations

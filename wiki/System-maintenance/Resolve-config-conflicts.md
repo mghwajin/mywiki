@@ -3,28 +3,27 @@
 
 ## Configuration file conflicts
 
-During or after a system update with `pacman -Syu`, the system may notify you of conflicting configuration files. 
+The system may notify you of conflicting configuration files during or after an update. 
 
 **It is highly recommended to resolve these conflicts ASAP**. Misconfigured or conflicting configs can prevent programs from running properly, and may worsen if left unaddressed.
 
 ```sh
-# example warning messages
-warning: /etc/pacman.d/xyz installed as /etc/pacman.d/xyz.pacnew
-
-warning: /etc/pacman.d/abc installed as /etc/pacman.d/abc.pacsave
+ # example messages
+ warning: /etc/pacman.d/xyz installed as /etc/pacman.d/xyz.pacnew
+ 
+ warning: /etc/pacman.d/abc installed as /etc/pacman.d/abc.pacsave
 ```
 
-The `eos-pacdiff` script is used to resolve these conflicting files. It utilizes both the `pacdiff` utility and `meld` GUI tools.
-
+The `eos-pacdiff` script is used to resolve these conflicts. It utilizes both the `pacdiff` utility and `meld` GUI tools.
 
 <!------------------------------------------------->
 
 ## Using `eos-pacdiff`
 
-1. When notified by the system about conflicting config files, run:
+1. Open a terminal and run:
    
     ```sh
-    eos-pacdiff
+     $ eos-pacdiff
     ```
 
 2. Select `V(iew)` to compare the config files side-by-side.
@@ -50,9 +49,9 @@ The `eos-pacdiff` script is used to resolve these conflicting files. It utilizes
 
 To run the same process manually, use:
 
- ```sh
- DIFFPROG=meld pacdiff -s
- ```
+```sh
+ $ DIFFPROG=meld pacdiff -s
+```
 
 > [!CAUTION]\
 > **Do not run this with root permissions!**  This is a powerful tool that can cause serious damage to system files if used incorrectly. 
@@ -64,8 +63,8 @@ To run the same process manually, use:
 Here is an example of how a file comparison looks like in **`meld`**:
 
   [meld-ex]: https://linuxopsys.com/wp-content/uploads/2024/03/basic_usages_1.png
-  ![A side-by-side visual comparison of an example script file in the `meld` GUI from the LinuxOpSys website][meld-ex]
-  *Image credit: [LinuxOpSys - How to use Meld diff tool in Linux][meld-ex]*
+   ![A side-by-side visual comparison of an example script file in the `meld` GUI from the LinuxOpSys website][meld-ex]\
+   *Image credit: [LinuxOpSys - How to use Meld diff tool in Linux][meld-ex]*
 
 > [!NOTE]\
 > See: [`pacdiff manpage`][pacdiff], [`diff manpage`][diff], [`meld manpage`][meld]
@@ -80,9 +79,9 @@ Here is an example of how a file comparison looks like in **`meld`**:
 
 These are configuration files that are generated when `pacman` creates copies of config files and prevents overwrite by appending `.pacsave` or `.pacnew` to the filename.
 
-  - A `.pacnew` file is created during an upgrade to avoid overwriting the existing configuration file.
+  - `.pacnew`  is created during an upgrade to avoid overwriting the existing config file.
 
-  - A `.pacsave` file is created during package removal (or an upgrade that first requires removal) and the system indicates that it should also be backed up.
+  - `.pacsave` is created during package removal (or an upgrade that first requires removal) and the system indicates that it should also be backed up.
 
 > [!NOTE]\
 > See: [Pacnew and Pacsave wiki][pacnew-pacsave]

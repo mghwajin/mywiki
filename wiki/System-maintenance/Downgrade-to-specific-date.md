@@ -16,14 +16,13 @@ The `eos-shifttime` application can revert system packages to their state at a s
 > [!IMPORTANT]\
 > Using `eos-shifttime` does not revert AUR packages. The downgrade only applies to official Arch packages from the archive repositories.
 
-The full `eos-shifttime` script can be viewed at `/usr/bin/eos-shifttime`. It was formerly known as the ["Easy Downgrade by Date"][downgrade] tool.
+To set up `eos-shifttime` to conveniently run from the Welcome app, follow the steps in the [Adding own commands guide][set-command].
 
-To set up `eos-shifttime` to conveniently run from the Welcome app, follow the steps in the [Set Up a Personal Command guide][set-command].
+The full `eos-shifttime` script can also be viewed at `/usr/bin/eos-shifttime`. It was formerly known as the ["Easy Downgrade by Date"][downgrade-wiki] tool.
 
-
-[downgrade]: https://discovery.endeavouros.com/pacman/easy-downgrade-by-date/2021/06/
+[downgrade-wiki]: https://discovery.endeavouros.com/pacman/easy-downgrade-by-date/2021/06/
 [eos-shifttime]: ./images/eos-shifttime.png
-[set-command]: 
+[set-command]: https://gitlab.com/endeavouros-filemirror/welcome/blob/main/Adding-own-commands.md
 
 ---
 

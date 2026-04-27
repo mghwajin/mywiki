@@ -47,12 +47,12 @@ Once scheduled snapshots are configured in `timeshift`, `cronie` will run regula
 
 1. First, stop the `cronie` process with:
     ```sh
-    systemctl stop cronie.service
+    $ systemctl stop cronie.service
     ```
 
 2. Check that the process is inactive by running:
    ```sh
-   systemctl status cronie.service
+   $ systemctl status cronie.service
    ```
  <details>
   <summary>Terminal output with active process: </summary>
@@ -68,7 +68,7 @@ Once scheduled snapshots are configured in `timeshift`, `cronie` will run regula
 
 3. After verifying that `cronie` is **inactive**, enter:
    ```sh
-   systemctl disable cronie.service
+    $ systemctl disable cronie.service
    ```
 
 <!------------------------------------------->

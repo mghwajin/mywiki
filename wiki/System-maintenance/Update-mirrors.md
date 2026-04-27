@@ -27,14 +27,12 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
 
 Arch packages are updated on a frequent and unscheduled rolling-release basis. Your Arch `mirrorlist` configuration should be updated regularly so your system can access up-to-date package databases.
 
-`mirrorlists` are configured separately for **Arch** mirrors and **Endeavour OS** mirrors. The process is the same, but different commands are used.
-
 ### Re-rank Arch mirrors
 
 1. Update the Arch `mirrorlist` by running the command:
    
     ```sh
-    reflector-simple
+     $ reflector-simple
     ```
 
 2. By default, `reflector-simple` selects the **20 fastest** mirrors based on your set location. You can adjust these preferences in the GUI tool.
@@ -54,7 +52,7 @@ Arch packages are updated on a frequent and unscheduled rolling-release basis. Y
 5. **Refresh the system** to sync the newly obtained mirrors with the Arch package databases:
    
     ```sh
-    yay -Syyu
+     $ yay -Syyu
     ```
 
 > [!CAUTION]\
@@ -64,12 +62,12 @@ Arch packages are updated on a frequent and unscheduled rolling-release basis. Y
 
 ### Re-rank EndeavourOS mirrors
 
-**Endeavour OS** has its own distro-unique packages, which are modified/additional versions distinct from Arch packages. These are stored in EOS-specific mirrors.
+**Endeavour OS** has its own distro-unique packages, which are modified/additional versions distinct from Arch packages.
 
 1. Update the Endeavour OS `mirrorlist` with:
    
     ```sh
-    eos-rankmirrors
+     $ eos-rankmirrors
     ```
 
 2. The `eos-rankmirrors` process only shows terminal output (no GUI tool).
@@ -79,7 +77,7 @@ Arch packages are updated on a frequent and unscheduled rolling-release basis. Y
    [rank-mirrors-1]: ./images/eos-rankmirrors-1.png
    ![`eos-rankmirrors` terminal output listing timed-out mirrors and the new mirrorlist.][rank-mirrors-1]
 
-4. By default, the `eos-rankmirrors` script generates a new `mirrorlist` containing the 20 fastest EOS mirrors. These are listed along with the original `mirrorlist`.
+4. By default, the  new `mirrorlist` contains the 20 fastest mirrors, which are listed with the original list for comparison.
 
 5. To confirm and save the changes, enter your system's root password.
    
@@ -91,11 +89,11 @@ Arch packages are updated on a frequent and unscheduled rolling-release basis. Y
 7. After confirming any mirrorlist changes, refresh the system with:
    
     ```sh
-    yay -Syyu
+     $ yay -Syyu
     ```
 
 > [!CAUTION]\
->  Do not run `yay` with root permissions (`sudo`), or it may cause accidental (and potentially fatal) system changes. The AUR helper does not require root permissions to manage packages.
+>  Do not run `yay` with root permissions (`sudo`), or it may cause accidental (and potentially fatal) system changes. This AUR helper does not require root permissions to manage packages.
 
 ---
 
@@ -171,13 +169,13 @@ When the user enters `sudo pacman -Syu` into a terminal, the `pacman` package ma
 
 ### How do I use `reflector` instead of `reflector-simple`?
 
-Endeavour OS uses uses `reflector` as its default mirror management program. `reflector-simple` provides a GUI tool to assist the user, but it is also possible to use specific CLI commands and options for the same result.
+Endeavour OS uses `reflector-simple`, which provides a GUI tool for `reflector` options. The same effect can be achieved with just a terminal command.
   
 To update to and save the **latest 20 mirrors** sorted by **speed**, enter:
 
- ```sh
- reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
- ```
+```sh
+ $ reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
+```
 
 This process will:
 
@@ -185,12 +183,10 @@ This process will:
 
  2. Filter/rank the mirrors by speed (until it has found 20, or a user-specified amount).
 
- 3. Saves then overwrites the current `/etc/pacman.d/mirrorlist` config file.
+ 3. Saves and overwrites the current `/etc/pacman.d/mirrorlist` config file.
 
 > [!NOTE]\
-> Refer to the [`reflector manpage`][reflector-manpage] documentation for usage details. 
->
-> This information can also be accessed offline by running `reflector --help` in the terminal.
+> Refer to the [`reflector manpage`][reflector-manpage] documentation for usage details.
 
 [reflector-manpage]: https://man.archlinux.org/man/reflector.1
 

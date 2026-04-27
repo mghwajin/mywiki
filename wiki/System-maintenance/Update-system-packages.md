@@ -9,14 +9,15 @@ There are 3 commands frequently used for Endeavour OS system updates: `pacman -S
 - [`eos-update`](#eos-update)
 - [FAQs](#faqs)
 
+---
+
 ## `sudo pacman -Syu`
 `pacman` is the package manager used to install and update programs in Arch Linux. To perform a full system update and refresh, run:
 
- ```sh
- sudo pacman -Syu
- ```
+```sh
+ $ sudo pacman -Syu
+```
 
-\
 **Example terminal output: `sudo pacman -Syu`**
 <details open="false"> 
  <summary></summary>
@@ -24,14 +25,14 @@ There are 3 commands frequently used for Endeavour OS system updates: `pacman -S
  ```sh
  [user@computer ~] $ sudo pacman -Syu
  [sudo password for user]:
-
+ 
  :: Synchronizing package databases...
  endeavouros                 17.0 KiB  3.17 KiB/s 00:05 [--------------------] 100%
  core                       117.4 KiB  23.3 KiB/s 00:05 [--------------------] 100%
  extra                        8.0 MiB  1447 KiB/s 00:06 [--------------------] 100%
  multilib                   125.4 KiB   416 KiB/s 00:00 [--------------------] 100%
 
- : Starting full system upgrade...
+ :: Starting full system upgrade...
  resolving dependencies...
  looking for conflicting packages... 
 
@@ -45,7 +46,7 @@ There are 3 commands frequently used for Endeavour OS system updates: `pacman -S
  Net Upgrade Size:      0.02 MiB
                                        # enter Y to confirm the updates
  :: Proceed with installation? [Y/n]   # enter n to cancel the operation  
- ```
+```
 </details>
 <br/>
 
@@ -66,54 +67,33 @@ Other basic `pacman` commands include:
 
 <!------------------------------------------------------>
 
+---
+
 ## `yay`
-`yay`<sup>[AUR][yay]</sup>  (or "yet another yogurt") is one of the most popular **AUR helpers** in the Arch Linux community. Like `pacman`, `yay` works as a package manager, simplifying the process of downloading, installing, updating, and removing AUR-specific packages.
+
+`yay`, or "yet another yogurt", is an AUR helper. Like `pacman`, `yay`<sup>[AUR][yay]</sup> performs package manager tasks to download, install, update, or remove AUR packages. 
+- It is recommended to run this command every 1 to 2 weeks.
 - *FAQ: [What is the Arch User Repository (AUR)?](#what-is-the-aur)*
 
 To update the system's native and AUR packages, run:
 ```sh
-yay
+ $ yay
 ```
-> [!IMPORTANT]\
-> It is recommended to run `yay` every 1-2 weeks. \
-
-The terminal will list the packages available to upgrade and may ask for the user to select:
-  1. Which package provider should be used (where to download files from)
-  2. If any packages should be excluded from the upgrade
-  3. If the Make dependencies should also be removed
-  4. Etc.
 
 > [!CAUTION]\
-> Do not run `yay` with root permissions (`sudo`), or it may cause accidental (and potentially fatal) system changes. AUR helpers do not require root permissions to manage packages.
+> Do not run `yay` with root permissions, as it may cause accidental (and potentially fatal) system changes. AUR helpers do not require root permissions to manage packages.
 
-**Example terminal output: `yay`**
-<details open="false"> 
- <summary></summary>
- 
- ```sh
- [user@computer ~]$ yay
- [sudo] password for user: 
- :: Synchronizing package databases...
-  endeavouros is up to date
-  core is up to date
-  extra is up to date
-  multilib is up to date
- :: Searching AUR for updates...
- :: There are 2 providers available for cargo:
- :: Repository extra
-    1) rust 2) rustup 
- 
- Enter a number (default=1): 
- ==> 
- ```
-</details>
-<br/>
+The terminal lists packages available to upgrade and may ask for the user to select:
 
-`yay` may upgrade packages to a verson newer than the one from Endeavour OS updates, as the EOS team confirms package stability before including packages in system updates. You can specify which AUR packages to update, or forgo the update with `Ctrl+Shift+C` in the terminal.
+  1. Which package provider should be used (where to download files from)
+
+  2. If any packages should be excluded from the upgrade
+
+  3. If the Make dependencies should also be removed
+
+  4. Etc.
 
 > [!NOTE]\
-> AUR packages are community-maintained and **unofficial**. It is highly recommended to check build files for any malicious code before installation.
->
 > See: `yay`<sup>[AUR][aur]</sup>, [`yay` commands list][yay-commands], [Arch User Repository (AUR)][aur], [AUR helpers][aur-helpers]
 
 [yay-commands]: https://linuxcommandlibrary.com/man/yay
@@ -129,35 +109,35 @@ The terminal will list the packages available to upgrade and may ask for the use
 Endeavour OS provides an optional update script that utilizes `pacman` and `yay` to run basic system updates with additional options.
 
 ```sh
-eos-update
+ $ eos-update
 ```
 
 Depending on user preference, `eos-update` can be used in place of `yay` or `sudo pacman -Syu`. In practice, `eos-update --aur` and `eos-update` perform the same tasks as `yay` and `pacman -Syu`, but provide an added layer of options. Some options may require more advanced setup.
 
 Notably, running `eos-update` may be more helpful for users just needing a quick fix to the system, and/or for users who do not update the system frequently.
 
-**Example terminal output: `eos-update --help`**
+**`eos-update --help` output:**
 <details open="false"> 
  <summary></summary>
 
  ```sh
- eos-update is a package updater for EndeavourOS and Arch.
+  eos-update is a package updater for EndeavourOS and Arch.
 
- eos-update is implemented as a wrapper around commands pacman and optionally yay/paru.
- Essentially runs commands 'pacman -Syu' and optionally 'yay -Sua' or 'paru -Sua'.
-
- eos-update includes (by default) special help in the following situations:
- - A dangling pacman db lock file (/var/lib/pacman/db.lck).
- - Disk space availability for updates (with a configurable minimum space).
- - Keyring package updating before updating other packages.
- - Running the 'sync' command after update. 
-
- Optional help: 
- - Can clear package databases in case of constant problems with them.
- - Can reset keyrings in case of constant problems with them.
- - Can check the validity of the locally configured lists of mirrors.
- - Updates AUR packages (with option --helper, see Usage below).
- - Ad hoc check for Nvidia GPU driver vs. kernel updates (non-dkms only).
+  eos-update is implemented as a wrapper around commands pacman and optionally yay/paru.
+  Essentially runs commands 'pacman -Syu' and optionally 'yay -Sua' or 'paru -Sua'.
+ 
+  eos-update includes (by default) special help in the following situations:
+  - A dangling pacman db lock file (/var/lib/pacman/db.lck).
+  - Disk space availability for updates (with a configurable minimum space).
+  - Keyring package updating before updating other packages.
+  - Running the 'sync' command after update. 
+ 
+  Optional help: 
+  - Can clear package databases in case of constant problems with them.
+  - Can reset keyrings in case of constant problems with them.
+  - Can check the validity of the locally configured lists of mirrors.
+  - Updates AUR packages (with option --helper, see Usage below).
+  - Ad hoc check for Nvidia GPU driver vs. kernel updates (non-dkms only).
  ```
 </details>
  
@@ -176,19 +156,31 @@ Some update errors are caused by issues with mirrors and mirrorlist configuratio
 
 ---
 
+### Can I undo or revert updates?
+The `eos-shifttime` tool allows users to revert system packages to versions of specified dates.
+
+To learn more about using `eos-shifttime`, refer to:
+
+- [Guide: Downgrade to a specific date](Downgrade-to-specific-date)
+- [Endeavour OS wiki: Easy Downgrade][downgrade-wiki]
+
+[downgrade-wiki]: https://discovery.endeavouros.com/pacman/easy-downgrade-by-date/2021/06/
+
+---
+
 ### Error: failed to commit transaction (conflicting files)
 Running a `sudo pacman -Syu` update may fail and display the following errors:
 
 ```sh
-error: failed to commit transaction (conflicting files)
-<example>: /example exists in filesystem (owned by filesystem)
-<example>: /lib/systemd/system/example.service exists in filesystem
+ error: failed to commit transaction (conflicting files)
+ <example>: /example exists in filesystem (owned by filesystem)
+ <example>: /lib/systemd/system/example.service exists in filesystem
 ```
 
 These issues can be resolved with manual intervention. Uninstall and remove the package from the system, then reinstall:
 ```sh
-sudo pacman -Rdd <example>
-sudo pacman -Syu <example>
+ $ sudo pacman -Rdd <example>
+ $ sudo pacman -Syu <example>
 ```
 
 You can also uninstall/remove the package, then run a full system update with `pacman` instead.
@@ -224,7 +216,7 @@ However, it is not necessary to use "double" `pacman` commands in most circumsta
 
 ### What is the AUR?
 
-AUR stands for the **Arch User Repository**, a large library of user community-produced packages for Arch Linux.
+The **Arch User Repository**, also known as AUR, is a large library of user community-produced packages for Arch Linux.
 
 Popular and well-maintained packages are voted on by the community to include in the official Arch *extra* repository.
 
@@ -237,7 +229,7 @@ Popular and well-maintained packages are voted on by the community to include in
 1. Clone the `git` repository listed on the package's AUR page:
    
    ```sh
-   git clone https://aur.archlinux.org/pkg.git
+    git clone https://aur.archlinux.org/pkg.git
    ```
 
 2. Change into the package directory:
@@ -249,12 +241,13 @@ Popular and well-maintained packages are voted on by the community to include in
 3. Build and install the package with:
    
    ```sh
-   makepkg -si
-   # or
-   pacman -U pkg-version-1.0.1.pkg.tar.zst
+    makepkg -si
+    # or
+    pacman -U pkg-version-1.0.1.pkg.tar.zst
    ```
 
 > [!WARNING]\
-> Always review the installation files (i.e. `PKGBUILD`) for any malicious code. Good user standing is required to maintain AUR packages, but this is not a foolproof preventative measure.
+> AUR packages are community-maintained and **unofficial**. BEFORE installation, it is highly recommended to check build files (i.e. `PKGBUILD`) for any malicious code.
+>
 
 <!-- EOF -->

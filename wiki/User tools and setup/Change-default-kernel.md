@@ -152,7 +152,7 @@ A list of the installed kernels can also be viewed with the `ls` command. This d
 
 ---
 
-### Use `cat` to view default kernel
+### Use `cat` to view boot config
 
 While `bootctl list` provides detailed information on installed kernels, you can use `cat` to view the boot loader config file.
 
