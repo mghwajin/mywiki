@@ -10,16 +10,16 @@
 
 ## Overview
 
-It is possible to have multiple kernels (or "versions") of the same Linux distro installed on a computer. The newest kernel is usually booted by default, but this can be adjusted to user preference.
+Your system can have multiple kernels (or installations) of the same Linux distro. This is typically from having different ISO images, such as EOS Mercury, Titan, and Ganymede. The newest kernel is usually booted by default, but can be adjusted to user preference.
 
-To change the default kernel at system boot, you need to identify and adjust the kernel `ids` used in the `boot loader config` file.
+To change the default kernel at system boot, you need to identify and adjust the kernel `ids` used in the `boot loader` config file.
 
 > [!NOTE]\
-> This guide assumes your system uses the default `systemd-boot` UEFI boot manager in Endeavour OS.
+> This guide is for systems using the default `systemd-boot` UEFI boot manager in Endeavour OS.
 
 ---
 
-## 1. Find kernel id with `bootctl`
+## 1. Find kernel `id` with `bootctl`
 
 1. Change to the root user with `sudo -s` and enter your password.
 
@@ -29,7 +29,7 @@ To change the default kernel at system boot, you need to identify and adjust the
        $ bootctl list
       ```
 
-3. The terminal will display various details for installed kernels, indicating the kernel `(selected)` at boot and set as `(default)`.
+3. The terminal will display installed kernel information, indicating which kernel was `(selected)` at boot, and which one is set as `(default)`.
 
       ```sh
       # kernel currently booted and set as default 
@@ -68,9 +68,9 @@ To change the default kernel at system boot, you need to identify and adjust the
 
       ![Terminal window showing the loader.conf file being edited with GNU nano editor][nano-efi-loader]
 
-2. Replace the old kernel `id` with the one you copied from earlier. This goes on the line containing `default` in the config file.
+2. On the line containing `default`, replace the old `machine-id` with the updated `id`.
 
-3. Be sure to add a wildcard/asterisk after the `id` (no space in between). This ensures the same kernel is booted regardless of version number.
+3. Add a wildcard/asterisk after the `id` (no space in between). This ensures the same kernel is booted regardless of release version, which can change after system updates.
 
       ```sh
         default af2ba735c1714a3ebdd24c10355d5b20* # add wildcard *
@@ -89,7 +89,7 @@ To change the default kernel at system boot, you need to identify and adjust the
 
 ## 3. Verify and reboot
 
-1. Run `bootctl list` again to verify the desired kernel was set as default, indicated with `(default)` by the kernel title.
+1. Run `bootctl list` again to verify the desired kernel has `(default)` by the kernel title.
 
      ```sh
          type: Boot Loader Specification Type 1 (.conf) 
@@ -102,7 +102,7 @@ To change the default kernel at system boot, you need to identify and adjust the
 
 ---
 
-## Additional information
+## 4. Additional information
 
 **Useful resources:**
 - [EOS Boot Configuration wiki][bootconfig]
@@ -113,7 +113,7 @@ To change the default kernel at system boot, you need to identify and adjust the
 
 ---
 
-### Find kernel id with `ls`
+### Use `ls` to find kernel `id`
 
 A list of the installed kernels can also be viewed with the `ls` command. This does not indicate which kernel is set to default, but has a much simpler terminal output.
 
@@ -147,11 +147,14 @@ A list of the installed kernels can also be viewed with the `ls` command. This d
 
 4. In most cases, the `(selected)` kernel is likely the last updated file. In this case, it would be the entry accessed on `Apr 20 18:18`.
 
+> [!NOTE]\
+> While the `ls -l` does not provide exact details like `bootctl list`. The simplified output is useful as a quick overview of the kernels installed on your system.
+
 ---
 
-### Check default kernel with `cat`
+### Use `cat` to view default kernel
 
-While `bootctl` provides detailed information on installed kernels, you can use `cat` to display the boot loader config file.
+While `bootctl list` provides detailed information on installed kernels, you can use `cat` to view the boot loader config file.
 
 1. Enter `sudo cat /efi/loader/loader.conf` to display the boot loader config.
 
@@ -162,7 +165,6 @@ While `bootctl` provides detailed information on installed kernels, you can use 
        console-mode auto
        reboot-for-bitlocker 1
       ```
-
 ---
 
 <!-- EOF -->
