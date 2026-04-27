@@ -22,13 +22,13 @@ Every 1-2 months, remove old packages from the `pacman` cache with:
 
 This command retains the 3 most recent versions while clearing the cache at `/var/cache/pacman/pkg`. This is a system-wide cache that can be accessed by helpers such as `yay`.
 
-- `paccache -r` - Clears cache while retaining last 3 versions.
+- `paccache -r` \- Clears cache while retaining last 3 versions.
 
-- `paccache -ru` - Clears uninstalled packages and retains the last 3 versions.
+- `paccache -ru` \- Clears uninstalled packages and retains the last 3 versions.
 
-- `paccache -ruk0` - CLears all versions of uninstalled packages.
+- `paccache -ruk0` \- CLears all versions of uninstalled packages.
 
-- `pacman -Sc` - Clears all uninstalled packages and unused `pacman sync` databases. Not recommended for network-shared caches.
+- `pacman -Sc` \- Clears all uninstalled packages and unused `pacman sync` databases. Not recommended for network-shared caches.
 
 > [!NOTE]\
 > It is not recommended to delete all past versions unless disk space is really needed. Keeping previous versions prevents redundant downloads when downgrading or reinstalling packages.

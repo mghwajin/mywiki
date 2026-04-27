@@ -43,7 +43,7 @@ The `eos-pacdiff` script is used to resolve these conflicts. It utilizes both th
 
 `eos-pacdiff` creates backups for all modes, warns the user not to make rash changes, and calls the below tools to assist the user resolve conflicts:
 
-- `pacdiff` \- A utility tool that allows users to view and merge any changes between the original and `.pacnew/.pacsave` files.
+- `pacdiff` \- A utility tool that allows users to view and merge any changes between the original and `.pacnew`/`.pacsave` files.
 
  - `meld` \- A GUI tool that helps users view the comparisons between config files
 
