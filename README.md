@@ -41,25 +41,27 @@ Through terminal commands, users can upgrade essential packages, obtain new prog
 
 | System Maintenance Guides   | User Tools & Setup Guides    |
 | --------------------------- | ---------------------------- |
-| [Overview][1]               | [Change login background][7] |
-| [Create system backups][2]  | [Copy cursor selection][8]   |
-| [Clean system files][3]     | [Enable `cron` scheduler][9] |
-| [Update system packages][4] | [`git clone` to a location][10] |
-| [Update mirrors][5]         | [Change default kernel][11]  |
-| [Resolve config conflicts][6] | ---   |
+| [Overview][1a]               | [Change login background][1b] |
+| [Create system backups][2a]  | [Copy cursor selection][2b]   |
+| [Clean system files][3a]     | [Enable `cron` scheduler][3b] |
+| [Downgrade packages][4a]     | [`git clone` to a location][4b] |
+| [Update system packages][5a] | [Change default kernel][5b]   |
+| [Update mirrors][6a]           |  ---  |
+| [Resolve config conflicts][7a] |  ---  |
 
 <!-- wiki links -->
-[1]: https://github.com/mghwajin/mywiki/wiki/System-maintenance-overview
-[2]: https://github.com/mghwajin/mywiki/wiki/Create-system-backups
-[3]: https://github.com/mghwajin/mywiki/wiki/Clean-system-files
-[4]: https://github.com/mghwajin/mywiki/wiki/Update-system-packages
-[5]: https://github.com/mghwajin/mywiki/wiki/Update-mirrors
-[6]: https://github.com/mghwajin/mywiki/wiki/Resolve-config-conflicts
-[7]: https://github.com/mghwajin/mywiki/wiki/Change-login-background
-[8]: https://github.com/mghwajin/mywiki/wiki/Copy-cursor-screen-selection
-[9]: https://github.com/mghwajin/mywiki/wiki/Enable-cron-scheduler
-[10]: https://github.com/mghwajin/mywiki/wiki/git-clone-to-a-location
-[11]: https://github.com/mghwajin/mywiki/wiki/Change-default-kernel
+[1a]: https://github.com/mghwajin/mywiki/wiki/System-maintenance-overview
+[2a]: https://github.com/mghwajin/mywiki/wiki/Create-system-backups
+[3a]: https://github.com/mghwajin/mywiki/wiki/Clean-system-files
+[4a]: https://github.com/mghwajin/mywiki/wiki/Downgrade-to-specific-date
+[5a]: https://github.com/mghwajin/mywiki/wiki/Update-system-packages
+[6a]: https://github.com/mghwajin/mywiki/wiki/Update-mirrors
+[7a]: https://github.com/mghwajin/mywiki/wiki/Resolve-config-conflicts
+[1b]: https://github.com/mghwajin/mywiki/wiki/Change-login-background
+[2b]: https://github.com/mghwajin/mywiki/wiki/Copy-cursor-screen-selection
+[3b]: https://github.com/mghwajin/mywiki/wiki/Enable-cron-scheduler
+[4b]: https://github.com/mghwajin/mywiki/wiki/git-clone-to-a-location
+[5b]: https://github.com/mghwajin/mywiki/wiki/Change-default-kernel
 
 ## Official resources
 Official **Endeavour OS** resources and links to additional useful information:
